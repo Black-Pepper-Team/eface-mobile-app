@@ -1,0 +1,1263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE32CF4F2BAC97A800E507B6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32CF4E2BAC97A800E507B6 /* MainView.swift */; };
+		CE32CF522BAC981300E507B6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CE32CF512BAC981300E507B6 /* Lottie */; };
+		CE32CF542BAC983400E507B6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32CF532BAC983400E507B6 /* String.swift */; };
+		CE5D04A42BAEC1DF005A1F3C /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = CE5D04A32BAEC1DF005A1F3C /* Web3 */; };
+		CE5D04A62BAEC1DF005A1F3C /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = CE5D04A52BAEC1DF005A1F3C /* Web3ContractABI */; };
+		CE5D04A82BAEC1DF005A1F3C /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE5D04A72BAEC1DF005A1F3C /* Web3PromiseKit */; };
+		CE5D04AA2BAED551005A1F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9E82B92BA881F500AAF885 /* Assets.xcassets */; };
+		CE778B672BA99F6500B26485 /* helvetica_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE778B652BA99F6500B26485 /* helvetica_regular.otf */; };
+		CE778B682BA99F6500B26485 /* helvetica_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE778B662BA99F6500B26485 /* helvetica_bold.otf */; };
+		CE778B6C2BA9A4DC00B26485 /* FontRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE778B6B2BA9A4DC00B26485 /* FontRegistry.swift */; };
+		CE778B792BA9CA0A00B26485 /* AppView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE778B782BA9CA0A00B26485 /* AppView+ViewModel.swift */; };
+		CE7B6FB02BAEE256004D9ABF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE7B6FAF2BAEE256004D9ABF /* Alamofire */; };
+		CE7B6FB22BAEE422004D9ABF /* EthersacnResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6FB12BAEE422004D9ABF /* EthersacnResp.swift */; };
+		CE7B6FB62BAEFC4A004D9ABF /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B6FB52BAEFC4A004D9ABF /* PresentView.swift */; };
+		CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */; };
+		CE9E82B62BA881F400AAF885 /* eBaloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B52BA881F400AAF885 /* eBaloApp.swift */; };
+		CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B72BA881F400AAF885 /* AppView.swift */; };
+		CE9E82CD2BA886A700AAF885 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9E82CF2BA886A700AAF885 /* Localizable.strings */; };
+		CE9E82D72BA8917100AAF885 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82D62BA8917100AAF885 /* LottieView.swift */; };
+		CE9E82E12BA8974C00AAF885 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */; };
+		CE9E82E92BA89DBE00AAF885 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82E82BA89DBE00AAF885 /* Config.swift */; };
+		CED7D8A32BAF931B0039394D /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D8992BAF931A0039394D /* libwitnesscalc_passportVerificationSHA256.a */; };
+		CED7D8A42BAF931B0039394D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89A2BAF931B0039394D /* libgmp.a */; };
+		CED7D8A52BAF931B0039394D /* libfq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89C2BAF931B0039394D /* libfq.a */; };
+		CED7D8A62BAF931B0039394D /* libwitnesscalc_passportVerificationSHA1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89D2BAF931B0039394D /* libwitnesscalc_passportVerificationSHA1.a */; };
+		CED7D8A72BAF931B0039394D /* libfr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89F2BAF931B0039394D /* libfr.a */; };
+		CED7D8A82BAF931B0039394D /* librapidsnark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D8A22BAF931B0039394D /* librapidsnark.a */; };
+		CED7D8AB2BAF94D80039394D /* ZKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7D8AA2BAF94D80039394D /* ZKUtils.swift */; };
+		CED7D8B62BB064C60039394D /* Identity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D8B52BB064C60039394D /* Identity.xcframework */; };
+		CEF07FED2BADF987004D9CB3 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FEC2BADF987004D9CB3 /* IntroView.swift */; };
+		CEF07FEF2BADFAE9004D9CB3 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FEE2BADFAE9004D9CB3 /* CommonButtonView.swift */; };
+		CEF07FF32BAE0348004D9CB3 /* MainView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FF22BAE0348004D9CB3 /* MainView+ViewModel.swift */; };
+		CEF07FF52BAE0419004D9CB3 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FF42BAE0419004D9CB3 /* MainTabView.swift */; };
+		CEF07FF92BAE0CB7004D9CB3 /* CredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FF82BAE0CB7004D9CB3 /* CredentialsView.swift */; };
+		CEF07FFC2BAE0D09004D9CB3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FFB2BAE0D09004D9CB3 /* Credential.swift */; };
+		CEF07FFE2BAE0DB3004D9CB3 /* SimpleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */; };
+		CEF080002BAE1F8D004D9CB3 /* CredentialItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF07FFF2BAE1F8D004D9CB3 /* CredentialItemView.swift */; };
+		CEF080062BAE2EE9004D9CB3 /* EbaloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF080052BAE2EE9004D9CB3 /* EbaloView.swift */; };
+		CEF0800A2BAE2FC1004D9CB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF080092BAE2FC1004D9CB3 /* SettingsView.swift */; };
+		CEF0800C2BAE3CE7004D9CB3 /* EbaloHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0800B2BAE3CE7004D9CB3 /* EbaloHistoryView.swift */; };
+		CEF080112BAE3DB0004D9CB3 /* EbaloHistoryView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF080102BAE3DB0004D9CB3 /* EbaloHistoryView+ViewModel.swift */; };
+		CEF080142BAE3E20004D9CB3 /* EbaloHistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF080132BAE3E20004D9CB3 /* EbaloHistoryEntry.swift */; };
+		CEF8C48A2BAEFE9100A3F51A /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CEF8C4892BAEFE9100A3F51A /* CodeScanner */; };
+		CEF8C48C2BAF04CF00A3F51A /* qr.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C48B2BAF04CF00A3F51A /* qr.json */; };
+		CEF8C48E2BAF0D0C00A3F51A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C48D2BAF0D0C00A3F51A /* UIImage.swift */; };
+		CEF8C4922BAF11B600A3F51A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4912BAF11B600A3F51A /* RegistrationView.swift */; };
+		CEF8C4962BAF12D600A3F51A /* RegistrationView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4952BAF12D600A3F51A /* RegistrationView+ViewModel.swift */; };
+		CEF8C4992BAF1CD900A3F51A /* RegistrationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4982BAF1CD900A3F51A /* RegistrationStatus.swift */; };
+		CEF8C49D2BAF254600A3F51A /* RegistrationEbaloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C49C2BAF254600A3F51A /* RegistrationEbaloView.swift */; };
+		CEF8C49F2BAF275A00A3F51A /* FaceScan.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C49E2BAF275A00A3F51A /* FaceScan.json */; };
+		CEF8C4A72BAF401A00A3F51A /* RegistrationVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4A62BAF401A00A3F51A /* RegistrationVoiceView.swift */; };
+		CEF8C4A92BAF42A100A3F51A /* VoiceRecording.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C4A82BAF42A100A3F51A /* VoiceRecording.json */; };
+		CEF8C4AD2BAF5FD900A3F51A /* RegistrationPassportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4AC2BAF5FD900A3F51A /* RegistrationPassportView.swift */; };
+		CEF8C4BD2BAF694600A3F51A /* passNFC.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C4BC2BAF694600A3F51A /* passNFC.json */; };
+		CEF8C4BF2BAF6C4600A3F51A /* passMRZ.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C4BE2BAF6C4600A3F51A /* passMRZ.json */; };
+		CEF8C4C62BAF70EE00A3F51A /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = CEF8C4C52BAF70EE00A3F51A /* NFCPassportReader */; };
+		CEF8C4C92BAF714800A3F51A /* QKMRZScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CEF8C4C82BAF714800A3F51A /* QKMRZScanner */; };
+		CEF8C4CC2BAF829900A3F51A /* MRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C4CB2BAF829900A3F51A /* MRZScannerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE32CF4E2BAC97A800E507B6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE32CF532BAC983400E507B6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE778B652BA99F6500B26485 /* helvetica_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helvetica_regular.otf; sourceTree = "<group>"; };
+		CE778B662BA99F6500B26485 /* helvetica_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helvetica_bold.otf; sourceTree = "<group>"; };
+		CE778B6B2BA9A4DC00B26485 /* FontRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRegistry.swift; sourceTree = "<group>"; };
+		CE778B782BA9CA0A00B26485 /* AppView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppView+ViewModel.swift"; sourceTree = "<group>"; };
+		CE7B6FB12BAEE422004D9ABF /* EthersacnResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthersacnResp.swift; sourceTree = "<group>"; };
+		CE7B6FB52BAEFC4A004D9ABF /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
+		CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Font.swift"; sourceTree = "<group>"; };
+		CE9E82B22BA881F400AAF885 /* eBalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9E82B52BA881F400AAF885 /* eBaloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBaloApp.swift; sourceTree = "<group>"; };
+		CE9E82B72BA881F400AAF885 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		CE9E82B92BA881F500AAF885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = eBalo/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CE9E82CE2BA886A700AAF885 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE9E82D62BA8917100AAF885 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		CE9E82E02BA8974C00AAF885 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		CE9E82E22BA8975F00AAF885 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		CE9E82E62BA89CE300AAF885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		CE9E82E82BA89DBE00AAF885 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CED7D8992BAF931A0039394D /* libwitnesscalc_passportVerificationSHA256.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwitnesscalc_passportVerificationSHA256.a; sourceTree = "<group>"; };
+		CED7D89A2BAF931B0039394D /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
+		CED7D89B2BAF931B0039394D /* prover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prover.h; sourceTree = "<group>"; };
+		CED7D89C2BAF931B0039394D /* libfq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfq.a; sourceTree = "<group>"; };
+		CED7D89D2BAF931B0039394D /* libwitnesscalc_passportVerificationSHA1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwitnesscalc_passportVerificationSHA1.a; sourceTree = "<group>"; };
+		CED7D89E2BAF931B0039394D /* witnesscalc_passportVerificationSHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witnesscalc_passportVerificationSHA1.h; sourceTree = "<group>"; };
+		CED7D89F2BAF931B0039394D /* libfr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfr.a; sourceTree = "<group>"; };
+		CED7D8A02BAF931B0039394D /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		CED7D8A12BAF931B0039394D /* witnesscalc_passportVerificationSHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witnesscalc_passportVerificationSHA256.h; sourceTree = "<group>"; };
+		CED7D8A22BAF931B0039394D /* librapidsnark.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librapidsnark.a; sourceTree = "<group>"; };
+		CED7D8AA2BAF94D80039394D /* ZKUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKUtils.swift; sourceTree = "<group>"; };
+		CED7D8B52BB064C60039394D /* Identity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Identity.xcframework; sourceTree = "<group>"; };
+		CEF07FEC2BADF987004D9CB3 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		CEF07FEE2BADFAE9004D9CB3 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
+		CEF07FF22BAE0348004D9CB3 /* MainView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView+ViewModel.swift"; sourceTree = "<group>"; };
+		CEF07FF42BAE0419004D9CB3 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CEF07FF82BAE0CB7004D9CB3 /* CredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsView.swift; sourceTree = "<group>"; };
+		CEF07FFB2BAE0D09004D9CB3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStorage.swift; sourceTree = "<group>"; };
+		CEF07FFF2BAE1F8D004D9CB3 /* CredentialItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialItemView.swift; sourceTree = "<group>"; };
+		CEF080052BAE2EE9004D9CB3 /* EbaloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EbaloView.swift; sourceTree = "<group>"; };
+		CEF080092BAE2FC1004D9CB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CEF0800B2BAE3CE7004D9CB3 /* EbaloHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EbaloHistoryView.swift; sourceTree = "<group>"; };
+		CEF080102BAE3DB0004D9CB3 /* EbaloHistoryView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EbaloHistoryView+ViewModel.swift"; sourceTree = "<group>"; };
+		CEF080132BAE3E20004D9CB3 /* EbaloHistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EbaloHistoryEntry.swift; sourceTree = "<group>"; };
+		CEF8C48B2BAF04CF00A3F51A /* qr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = qr.json; sourceTree = "<group>"; };
+		CEF8C48D2BAF0D0C00A3F51A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CEF8C4912BAF11B600A3F51A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		CEF8C4952BAF12D600A3F51A /* RegistrationView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationView+ViewModel.swift"; sourceTree = "<group>"; };
+		CEF8C4982BAF1CD900A3F51A /* RegistrationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStatus.swift; sourceTree = "<group>"; };
+		CEF8C49C2BAF254600A3F51A /* RegistrationEbaloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationEbaloView.swift; sourceTree = "<group>"; };
+		CEF8C49E2BAF275A00A3F51A /* FaceScan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FaceScan.json; sourceTree = "<group>"; };
+		CEF8C4A62BAF401A00A3F51A /* RegistrationVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVoiceView.swift; sourceTree = "<group>"; };
+		CEF8C4A82BAF42A100A3F51A /* VoiceRecording.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VoiceRecording.json; sourceTree = "<group>"; };
+		CEF8C4AC2BAF5FD900A3F51A /* RegistrationPassportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPassportView.swift; sourceTree = "<group>"; };
+		CEF8C4BC2BAF694600A3F51A /* passNFC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = passNFC.json; sourceTree = "<group>"; };
+		CEF8C4BE2BAF6C4600A3F51A /* passMRZ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = passMRZ.json; sourceTree = "<group>"; };
+		CEF8C4CA2BAF721B00A3F51A /* eBalo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eBalo.entitlements; sourceTree = "<group>"; };
+		CEF8C4CB2BAF829900A3F51A /* MRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRZScannerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE9E82AF2BA881F400AAF885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED7D8A52BAF931B0039394D /* libfq.a in Frameworks */,
+				CED7D8A72BAF931B0039394D /* libfr.a in Frameworks */,
+				CED7D8A32BAF931B0039394D /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */,
+				CE7B6FB02BAEE256004D9ABF /* Alamofire in Frameworks */,
+				CED7D8A42BAF931B0039394D /* libgmp.a in Frameworks */,
+				CE5D04A62BAEC1DF005A1F3C /* Web3ContractABI in Frameworks */,
+				CEF8C48A2BAEFE9100A3F51A /* CodeScanner in Frameworks */,
+				CE32CF522BAC981300E507B6 /* Lottie in Frameworks */,
+				CED7D8A82BAF931B0039394D /* librapidsnark.a in Frameworks */,
+				CED7D8B62BB064C60039394D /* Identity.xcframework in Frameworks */,
+				CED7D8A62BAF931B0039394D /* libwitnesscalc_passportVerificationSHA1.a in Frameworks */,
+				CE5D04A82BAEC1DF005A1F3C /* Web3PromiseKit in Frameworks */,
+				CE5D04A42BAEC1DF005A1F3C /* Web3 in Frameworks */,
+				CEF8C4C92BAF714800A3F51A /* QKMRZScanner in Frameworks */,
+				CEF8C4C62BAF70EE00A3F51A /* NFCPassportReader in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE32CF552BAC987500E507B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE32CF562BAC987A00E507B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B6FB12BAEE422004D9ABF /* EthersacnResp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE32CF572BAC987D00E507B6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FF22BAE0348004D9CB3 /* MainView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE32CF582BAC988000E507B6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE778B5B2BA9976C00B26485 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE778B642BA99F5100B26485 /* Helvetica */,
+				CE778B6B2BA9A4DC00B26485 /* FontRegistry.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE778B642BA99F5100B26485 /* Helvetica */ = {
+			isa = PBXGroup;
+			children = (
+				CE778B662BA99F6500B26485 /* helvetica_bold.otf */,
+				CE778B652BA99F6500B26485 /* helvetica_regular.otf */,
+			);
+			path = Helvetica;
+			sourceTree = "<group>";
+		};
+		CE778B6F2BA9A73700B26485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE32CF532BAC983400E507B6 /* String.swift */,
+				CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */,
+				CEF8C48D2BAF0D0C00A3F51A /* UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE778B772BA9C9FC00B26485 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE778B782BA9CA0A00B26485 /* AppView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE778B7A2BA9D28A00B26485 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE32CF572BAC987D00E507B6 /* ViewModels */,
+				CE32CF552BAC987500E507B6 /* Models */,
+				CE778B7B2BA9D30100B26485 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE778B7B2BA9D30100B26485 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE32CF4E2BAC97A800E507B6 /* MainView.swift */,
+				CEF07FF42BAE0419004D9CB3 /* MainTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7B6FB32BAEFC0E004D9ABF /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B6FB42BAEFC40004D9ABF /* Views */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		CE7B6FB42BAEFC40004D9ABF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B6FB52BAEFC4A004D9ABF /* PresentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE9E82A92BA881F400AAF885 = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4A02BAF32F000A3F51A /* Frameworks */,
+				CE9E82B42BA881F400AAF885 /* eBalo */,
+				CE9E82B32BA881F400AAF885 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE9E82B32BA881F400AAF885 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82B22BA881F400AAF885 /* eBalo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE9E82B42BA881F400AAF885 /* eBalo */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4CA2BAF721B00A3F51A /* eBalo.entitlements */,
+				CE9E82E62BA89CE300AAF885 /* Info.plist */,
+				CE9E82C62BA8851B00AAF885 /* Code */,
+				CE9E82C42BA8850800AAF885 /* Resources */,
+				CE9E82C32BA884B900AAF885 /* SupportingFiles */,
+			);
+			path = eBalo;
+			sourceTree = "<group>";
+		};
+		CE9E82C32BA884B900AAF885 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82DF2BA8972800AAF885 /* Configs */,
+				CE9E82B52BA881F400AAF885 /* eBaloApp.swift */,
+				CE9E82CF2BA886A700AAF885 /* Localizable.strings */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CE9E82C42BA8850800AAF885 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE778B5B2BA9976C00B26485 /* Fonts */,
+				CE9E82D22BA8908700AAF885 /* Animations */,
+				CE9E82B92BA881F500AAF885 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE9E82C62BA8851B00AAF885 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82CA2BA885B700AAF885 /* Utils */,
+				CE9E82C72BA8852700AAF885 /* Features */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		CE9E82C72BA8852700AAF885 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C48F2BAF119800A3F51A /* Registration */,
+				CE7B6FB32BAEFC0E004D9ABF /* Present */,
+				CEF080072BAE2F6D004D9CB3 /* Settings */,
+				CEF080032BAE2ECB004D9CB3 /* Ebalo */,
+				CEF07FF62BAE0C9B004D9CB3 /* Credentials */,
+				CEF07FEA2BADF97D004D9CB3 /* Intro */,
+				CE778B7A2BA9D28A00B26485 /* Main */,
+				CE9E82D12BA888F300AAF885 /* Common */,
+				CE9E82C82BA8853900AAF885 /* App */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CE9E82C82BA8853900AAF885 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE32CF562BAC987A00E507B6 /* Models */,
+				CE778B772BA9C9FC00B26485 /* ViewModels */,
+				CE9E82C92BA8854E00AAF885 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE9E82C92BA8854E00AAF885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82B72BA881F400AAF885 /* AppView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE9E82CA2BA885B700AAF885 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE778B6F2BA9A73700B26485 /* Extensions */,
+				CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */,
+				CED7D8AA2BAF94D80039394D /* ZKUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE9E82D12BA888F300AAF885 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE32CF582BAC988000E507B6 /* ViewModels */,
+				CE9E82E72BA89D9600AAF885 /* Models */,
+				CE9E82D52BA8915C00AAF885 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE9E82D22BA8908700AAF885 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4BE2BAF6C4600A3F51A /* passMRZ.json */,
+				CEF8C4BC2BAF694600A3F51A /* passNFC.json */,
+				CEF8C4A82BAF42A100A3F51A /* VoiceRecording.json */,
+				CEF8C49E2BAF275A00A3F51A /* FaceScan.json */,
+				CEF8C48B2BAF04CF00A3F51A /* qr.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		CE9E82D52BA8915C00AAF885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82D62BA8917100AAF885 /* LottieView.swift */,
+				CEF07FEE2BADFAE9004D9CB3 /* CommonButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE9E82DF2BA8972800AAF885 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82E02BA8974C00AAF885 /* Development.xcconfig */,
+				CE9E82E22BA8975F00AAF885 /* Production.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		CE9E82E72BA89D9600AAF885 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E82E82BA89DBE00AAF885 /* Config.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF07FEA2BADF97D004D9CB3 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FEB2BADF981004D9CB3 /* Views */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		CEF07FEB2BADF981004D9CB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FEC2BADF987004D9CB3 /* IntroView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF07FF62BAE0C9B004D9CB3 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FFA2BAE0D00004D9CB3 /* Models */,
+				CEF07FF72BAE0CA9004D9CB3 /* Views */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		CEF07FF72BAE0CA9004D9CB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FF82BAE0CB7004D9CB3 /* CredentialsView.swift */,
+				CEF07FFF2BAE1F8D004D9CB3 /* CredentialItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF07FFA2BAE0D00004D9CB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF07FFB2BAE0D09004D9CB3 /* Credential.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF080032BAE2ECB004D9CB3 /* Ebalo */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080122BAE3DFE004D9CB3 /* Models */,
+				CEF0800D2BAE3D84004D9CB3 /* ViewModels */,
+				CEF080042BAE2ED4004D9CB3 /* Views */,
+			);
+			path = Ebalo;
+			sourceTree = "<group>";
+		};
+		CEF080042BAE2ED4004D9CB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080052BAE2EE9004D9CB3 /* EbaloView.swift */,
+				CEF0800B2BAE3CE7004D9CB3 /* EbaloHistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF080072BAE2F6D004D9CB3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080082BAE2FB9004D9CB3 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CEF080082BAE2FB9004D9CB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080092BAE2FC1004D9CB3 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF0800D2BAE3D84004D9CB3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080102BAE3DB0004D9CB3 /* EbaloHistoryView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEF080122BAE3DFE004D9CB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF080132BAE3E20004D9CB3 /* EbaloHistoryEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF8C48F2BAF119800A3F51A /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4972BAF1CD000A3F51A /* Models */,
+				CEF8C4932BAF12A600A3F51A /* ViewModels */,
+				CEF8C4902BAF11AB00A3F51A /* Views */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		CEF8C4902BAF11AB00A3F51A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4912BAF11B600A3F51A /* RegistrationView.swift */,
+				CEF8C49C2BAF254600A3F51A /* RegistrationEbaloView.swift */,
+				CEF8C4A62BAF401A00A3F51A /* RegistrationVoiceView.swift */,
+				CEF8C4AC2BAF5FD900A3F51A /* RegistrationPassportView.swift */,
+				CEF8C4CB2BAF829900A3F51A /* MRZScannerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF8C4932BAF12A600A3F51A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4952BAF12D600A3F51A /* RegistrationView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEF8C4972BAF1CD000A3F51A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C4982BAF1CD900A3F51A /* RegistrationStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF8C4A02BAF32F000A3F51A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CED7D8B52BB064C60039394D /* Identity.xcframework */,
+				CED7D8A02BAF931B0039394D /* bridge.h */,
+				CED7D89C2BAF931B0039394D /* libfq.a */,
+				CED7D89F2BAF931B0039394D /* libfr.a */,
+				CED7D89A2BAF931B0039394D /* libgmp.a */,
+				CED7D8A22BAF931B0039394D /* librapidsnark.a */,
+				CED7D89D2BAF931B0039394D /* libwitnesscalc_passportVerificationSHA1.a */,
+				CED7D8992BAF931A0039394D /* libwitnesscalc_passportVerificationSHA256.a */,
+				CED7D89B2BAF931B0039394D /* prover.h */,
+				CED7D89E2BAF931B0039394D /* witnesscalc_passportVerificationSHA1.h */,
+				CED7D8A12BAF931B0039394D /* witnesscalc_passportVerificationSHA256.h */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE9E82B12BA881F400AAF885 /* eBalo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9E82C02BA881F500AAF885 /* Build configuration list for PBXNativeTarget "eBalo" */;
+			buildPhases = (
+				CE9E82AE2BA881F400AAF885 /* Sources */,
+				CE9E82AF2BA881F400AAF885 /* Frameworks */,
+				CE9E82B02BA881F400AAF885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eBalo;
+			packageProductDependencies = (
+				CE32CF512BAC981300E507B6 /* Lottie */,
+				CE5D04A32BAEC1DF005A1F3C /* Web3 */,
+				CE5D04A52BAEC1DF005A1F3C /* Web3ContractABI */,
+				CE5D04A72BAEC1DF005A1F3C /* Web3PromiseKit */,
+				CE7B6FAF2BAEE256004D9ABF /* Alamofire */,
+				CEF8C4892BAEFE9100A3F51A /* CodeScanner */,
+				CEF8C4C52BAF70EE00A3F51A /* NFCPassportReader */,
+				CEF8C4C82BAF714800A3F51A /* QKMRZScanner */,
+			);
+			productName = eBalo;
+			productReference = CE9E82B22BA881F400AAF885 /* eBalo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE9E82AA2BA881F400AAF885 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CE9E82B12BA881F400AAF885 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CE9E82AD2BA881F400AAF885 /* Build configuration list for PBXProject "eBalo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE9E82A92BA881F400AAF885;
+			packageReferences = (
+				CE32CF502BAC981300E507B6 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				CE5D04A22BAEC1DF005A1F3C /* XCRemoteSwiftPackageReference "Web3.swift" */,
+				CE7B6FAE2BAEE256004D9ABF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CEF8C4882BAEFE9100A3F51A /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				CEF8C4C42BAF70EE00A3F51A /* XCRemoteSwiftPackageReference "NFCPassportReader" */,
+				CEF8C4C72BAF714800A3F51A /* XCRemoteSwiftPackageReference "QKMRZScanner" */,
+			);
+			productRefGroup = CE9E82B32BA881F400AAF885 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE9E82B12BA881F400AAF885 /* eBalo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE9E82B02BA881F400AAF885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF8C4BF2BAF6C4600A3F51A /* passMRZ.json in Resources */,
+				CEF8C48C2BAF04CF00A3F51A /* qr.json in Resources */,
+				CE9E82CD2BA886A700AAF885 /* Localizable.strings in Resources */,
+				CE778B682BA99F6500B26485 /* helvetica_bold.otf in Resources */,
+				CEF8C49F2BAF275A00A3F51A /* FaceScan.json in Resources */,
+				CE9E82E12BA8974C00AAF885 /* Development.xcconfig in Resources */,
+				CEF8C4BD2BAF694600A3F51A /* passNFC.json in Resources */,
+				CE778B672BA99F6500B26485 /* helvetica_regular.otf in Resources */,
+				CEF8C4A92BAF42A100A3F51A /* VoiceRecording.json in Resources */,
+				CE5D04AA2BAED551005A1F3C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE9E82AE2BA881F400AAF885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF080142BAE3E20004D9CB3 /* EbaloHistoryEntry.swift in Sources */,
+				CEF8C48E2BAF0D0C00A3F51A /* UIImage.swift in Sources */,
+				CE32CF4F2BAC97A800E507B6 /* MainView.swift in Sources */,
+				CEF8C4922BAF11B600A3F51A /* RegistrationView.swift in Sources */,
+				CEF07FF92BAE0CB7004D9CB3 /* CredentialsView.swift in Sources */,
+				CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */,
+				CE7B6FB22BAEE422004D9ABF /* EthersacnResp.swift in Sources */,
+				CEF07FEF2BADFAE9004D9CB3 /* CommonButtonView.swift in Sources */,
+				CE9E82E92BA89DBE00AAF885 /* Config.swift in Sources */,
+				CED7D8AB2BAF94D80039394D /* ZKUtils.swift in Sources */,
+				CE9E82B62BA881F400AAF885 /* eBaloApp.swift in Sources */,
+				CEF080062BAE2EE9004D9CB3 /* EbaloView.swift in Sources */,
+				CE778B6C2BA9A4DC00B26485 /* FontRegistry.swift in Sources */,
+				CEF07FFC2BAE0D09004D9CB3 /* Credential.swift in Sources */,
+				CEF8C4CC2BAF829900A3F51A /* MRZScannerView.swift in Sources */,
+				CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */,
+				CEF07FF52BAE0419004D9CB3 /* MainTabView.swift in Sources */,
+				CE9E82D72BA8917100AAF885 /* LottieView.swift in Sources */,
+				CEF080002BAE1F8D004D9CB3 /* CredentialItemView.swift in Sources */,
+				CEF0800C2BAE3CE7004D9CB3 /* EbaloHistoryView.swift in Sources */,
+				CEF8C4A72BAF401A00A3F51A /* RegistrationVoiceView.swift in Sources */,
+				CEF8C4992BAF1CD900A3F51A /* RegistrationStatus.swift in Sources */,
+				CEF8C4962BAF12D600A3F51A /* RegistrationView+ViewModel.swift in Sources */,
+				CE7B6FB62BAEFC4A004D9ABF /* PresentView.swift in Sources */,
+				CEF8C49D2BAF254600A3F51A /* RegistrationEbaloView.swift in Sources */,
+				CEF080112BAE3DB0004D9CB3 /* EbaloHistoryView+ViewModel.swift in Sources */,
+				CEF07FED2BADF987004D9CB3 /* IntroView.swift in Sources */,
+				CE32CF542BAC983400E507B6 /* String.swift in Sources */,
+				CEF07FFE2BAE0DB3004D9CB3 /* SimpleStorage.swift in Sources */,
+				CEF07FF32BAE0348004D9CB3 /* MainView+ViewModel.swift in Sources */,
+				CE778B792BA9CA0A00B26485 /* AppView+ViewModel.swift in Sources */,
+				CEF8C4AD2BAF5FD900A3F51A /* RegistrationPassportView.swift in Sources */,
+				CEF0800A2BAE2FC1004D9CB3 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE9E82CF2BA886A700AAF885 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9E82CE2BA886A700AAF885 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE9E82BE2BA881F500AAF885 /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Development)";
+		};
+		CE9E82BF2BA881F500AAF885 /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		CE9E82C12BA881F500AAF885 /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = eBalo/eBalo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7CLECN442;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = eBalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Passport NFC Reading";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Passport Machine Readable Zone Reading";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Voice Reading";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.eBaloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEVELOPMENT;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Frameworks/bridge.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Development)";
+		};
+		CE9E82C22BA881F500AAF885 /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = eBalo/eBalo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7CLECN442;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = eBalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Passport NFC Reading";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Passport Machine Readable Zone Reading";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Voice Reading";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.eBaloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEVELOPMENT;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Frameworks/bridge.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release (Development)";
+		};
+		CE9E82DB2BA895C300AAF885 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E22BA8975F00AAF885 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Production)";
+		};
+		CE9E82DC2BA895C300AAF885 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E22BA8975F00AAF885 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = eBalo/eBalo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7CLECN442;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = eBalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Passport NFC Reading";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Passport Machine Readable Zone Reading";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Voice Reading";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.eBaloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Frameworks/bridge.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Production)";
+		};
+		CE9E82DD2BA895C500AAF885 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E22BA8975F00AAF885 /* Production.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Production)";
+		};
+		CE9E82DE2BA895C500AAF885 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9E82E22BA8975F00AAF885 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = eBalo/eBalo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7CLECN442;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = eBalo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Passport NFC Reading";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Passport Machine Readable Zone Reading";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Voice Reading";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.eBaloApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Frameworks/bridge.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release (Production)";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE9E82AD2BA881F400AAF885 /* Build configuration list for PBXProject "eBalo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9E82BE2BA881F500AAF885 /* Debug (Development) */,
+				CE9E82DB2BA895C300AAF885 /* Debug (Production) */,
+				CE9E82BF2BA881F500AAF885 /* Release (Development) */,
+				CE9E82DD2BA895C500AAF885 /* Release (Production) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release (Development)";
+		};
+		CE9E82C02BA881F500AAF885 /* Build configuration list for PBXNativeTarget "eBalo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9E82C12BA881F500AAF885 /* Debug (Development) */,
+				CE9E82DC2BA895C300AAF885 /* Debug (Production) */,
+				CE9E82C22BA881F500AAF885 /* Release (Development) */,
+				CE9E82DE2BA895C500AAF885 /* Release (Production) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release (Development)";
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE32CF502BAC981300E507B6 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:airbnb/lottie-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.4.1;
+			};
+		};
+		CE5D04A22BAEC1DF005A1F3C /* XCRemoteSwiftPackageReference "Web3.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Boilertalk/Web3.swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.8.7;
+			};
+		};
+		CE7B6FAE2BAEE256004D9ABF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.0;
+			};
+		};
+		CEF8C4882BAEFE9100A3F51A /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:twostraws/CodeScanner.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.4.0;
+			};
+		};
+		CEF8C4C42BAF70EE00A3F51A /* XCRemoteSwiftPackageReference "NFCPassportReader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:rarimo/NFCPassportReader.git";
+			requirement = {
+				kind = revision;
+				revision = 82c42a72ebb202c575fc7877fd3607e37688f3c2;
+			};
+		};
+		CEF8C4C72BAF714800A3F51A /* XCRemoteSwiftPackageReference "QKMRZScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Mattijah/QKMRZScanner.git";
+			requirement = {
+				branch = "master-spm";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE32CF512BAC981300E507B6 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE32CF502BAC981300E507B6 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		CE5D04A32BAEC1DF005A1F3C /* Web3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5D04A22BAEC1DF005A1F3C /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3;
+		};
+		CE5D04A52BAEC1DF005A1F3C /* Web3ContractABI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5D04A22BAEC1DF005A1F3C /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3ContractABI;
+		};
+		CE5D04A72BAEC1DF005A1F3C /* Web3PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5D04A22BAEC1DF005A1F3C /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3PromiseKit;
+		};
+		CE7B6FAF2BAEE256004D9ABF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7B6FAE2BAEE256004D9ABF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CEF8C4892BAEFE9100A3F51A /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF8C4882BAEFE9100A3F51A /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		CEF8C4C52BAF70EE00A3F51A /* NFCPassportReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF8C4C42BAF70EE00A3F51A /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
+			productName = NFCPassportReader;
+		};
+		CEF8C4C82BAF714800A3F51A /* QKMRZScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF8C4C72BAF714800A3F51A /* XCRemoteSwiftPackageReference "QKMRZScanner" */;
+			productName = QKMRZScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE9E82AA2BA881F400AAF885 /* Project object */;
+}
