@@ -14,27 +14,41 @@ struct MainView: View {
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
-        ZStack {
-            VStack {
-                if registrationStatus.isCreatingNew {
-                    RegistrationView(registrationStatus: registrationStatus)
-                } else {
-                    if viewModel.activeTab == 0 {
-                        CredentialsView() {
-                            self.registrationStatus.start()
+        NavigationStack {
+            ZStack {
+                VStack {
+                    if registrationStatus.isCreatingNew {
+                        RegistrationView(registrationStatus: registrationStatus)
+                    } else {
+                        if viewModel.activeTab == 0 {
+                            CredentialsView() {
+                                self.registrationStatus.start()
+                            }
+                        }
+                        if viewModel.activeTab == 1 {
+                            EbaloView()
+                        }
+                        if viewModel.activeTab == 2 {
+                            PresentView()
+                        }
+                        if viewModel.activeTab == 3 {
+                            SettingsView()
+                        }
+                        Spacer()
+                        ZStack {
+                            MainTabView(activeTab: $viewModel.activeTab)
+                            HStack {
+                                Spacer()
+                                NavigationLink {
+                                    ELeleChatView()
+                                        .navigationBarBackButtonHidden(true)
+                                } label: {
+                                    ELeleAssistentButton()
+                                        .padding()
+                                }
+                            }
                         }
                     }
-                    if viewModel.activeTab == 1 {
-                        EbaloView()
-                    }
-                    if viewModel.activeTab == 2 {
-                        PresentView()
-                    }
-                    if viewModel.activeTab == 3 {
-                        SettingsView()
-                    }
-                    Spacer()
-                    MainTabView(activeTab: $viewModel.activeTab)
                 }
             }
         }

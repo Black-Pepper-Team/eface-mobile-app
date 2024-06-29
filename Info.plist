@@ -22,5 +22,9 @@
 		<string>A0000002480300</string>
 		<string>A00000045645444C2D3031</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>AI Asssistent communication</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Hello</string>
 </dict>
 </plist>

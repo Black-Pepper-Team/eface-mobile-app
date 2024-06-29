@@ -144,7 +144,7 @@ extension AppView {
             
             let requestBody = DimaRequest(data: DimaRequestDataClass(id: 1, type: "EXTRACT", attributes: requestAttr))
             
-            let request = "https://0a77-62-80-164-77.ngrok-free.app/integrations/face-extractor-svc/extract"
+            let request = "https://c2b8-185-46-149-146.ngrok-free.app/integrations/face-extractor-svc/extract"
             
             let responseRaw = await AF.request(request, method: .post, parameters: requestBody, encoder: JSONParameterEncoder())
                 .serializingDecodable(DimaResponse.self)
