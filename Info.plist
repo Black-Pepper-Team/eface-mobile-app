@@ -28,5 +28,7 @@
 	<string>Hello</string>
 	<key>CHAT_API_URL</key>
 	<string>${CHAT_API_URL}</string>
+	<key>COMMUNITIES_API_URL</key>
+	<string>${COMMUNITIES_API_URL}</string>
 </dict>
 </plist>

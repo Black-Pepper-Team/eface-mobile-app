@@ -10,12 +10,12 @@ class ChatApi {
         self.url = Config.shared.general.chatApiURL
     }
     
-    func sendMessage(_ text: String) async throws -> SendMessageResponse {
+    func sendMessage(_ id: String, _ text: String) async throws -> SendMessageResponse {
         let requestUrl = url.appendingPathComponent("/user-request")
         
         let requestPayload = SendMessageRequest(
             prompt: text,
-            id: "",
+            id: id,
             key: ""
         )
         
@@ -27,11 +27,11 @@ class ChatApi {
         return response
     }
     
-    func pollResponse() async throws -> PollResponseResponse {
+    func pollResponse(_ id: String) async throws -> PollResponseResponse {
         let requestUrl = url.appendingPathComponent("/poll-response")
         
         let requestPayload = PollResponseRequest(
-            id: "1",
+            id: id,
             key: ""
         )
         

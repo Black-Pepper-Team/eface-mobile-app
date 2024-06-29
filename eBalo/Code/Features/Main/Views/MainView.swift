@@ -29,7 +29,7 @@ struct MainView: View {
                             EbaloView()
                         }
                         if viewModel.activeTab == 2 {
-                            ZStack {}
+                            CommunitiesView()
                         }
                         if viewModel.activeTab == 3 {
                             SettingsView()

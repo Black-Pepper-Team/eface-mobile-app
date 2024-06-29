@@ -22,12 +22,14 @@ extension Config {
         let privacyPolicyURL: URL
         let termsOfUseURL: URL
         let chatApiURL: URL
+        let communitiesApiURL: URL
         
         init() throws {
             guard
                 var privacyPolicyURLRaw = Bundle.main.object(forInfoDictionaryKey: "PRIVACY_POLICY_URL") as? String,
                 var termsOfUseURLRaw = Bundle.main.object(forInfoDictionaryKey: "TERMS_OF_USE_URL") as? String,
-                var chatApiURLRaw = Bundle.main.object(forInfoDictionaryKey: "CHAT_API_URL") as? String
+                var chatApiURLRaw = Bundle.main.object(forInfoDictionaryKey: "CHAT_API_URL") as? String,
+                var communitiesApiURLRaw = Bundle.main.object(forInfoDictionaryKey: "COMMUNITIES_API_URL") as? String
             else {
                 throw "some config value aren't initialized"
             }
@@ -39,11 +41,13 @@ extension Config {
             termsOfUseURLRaw = String(termsOfUseURLRaw.dropLast())
             
             chatApiURLRaw = String(chatApiURLRaw.dropFirst().dropLast())
+            communitiesApiURLRaw = String(communitiesApiURLRaw.dropFirst().dropLast())
             
             guard
                 let privacyPolicyURL = URL(string: privacyPolicyURLRaw),
                 let termsOfUseURL = URL(string: termsOfUseURLRaw),
-                let chatApiURL = URL(string: chatApiURLRaw)
+                let chatApiURL = URL(string: chatApiURLRaw),
+                let communitiesApiURL = URL(string: communitiesApiURLRaw)
             else {
                 throw "PRIVACY_POLICY_URL and/or TERMS_OF_USE_URL aren't URLs"
             }
@@ -51,6 +55,7 @@ extension Config {
             self.privacyPolicyURL = privacyPolicyURL
             self.termsOfUseURL = termsOfUseURL
             self.chatApiURL = chatApiURL
+            self.communitiesApiURL = communitiesApiURL
         }
     }
 }

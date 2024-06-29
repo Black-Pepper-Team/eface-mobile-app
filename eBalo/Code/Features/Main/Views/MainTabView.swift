@@ -27,7 +27,7 @@ struct MainTabView: View {
                 )
                 MainTabItemView(
                     activeTab: $activeTab,
-                    iconName: "PresentIcon",
+                    iconName: "InfoIcon",
                     tag: 2
                 )
                 MainTabItemView(

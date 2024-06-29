@@ -33,7 +33,7 @@ struct IntroView: View {
             CommonButtonView("LET'S START") {
                 isPassed = true
             }
-            Text("Developed By Black Pepper Team")
+            Text("Developed By black pAIrates Team")
                 .font(.customFont(font: .helvetica, style: .regular, size: 14))
                 .foregroundStyle(.lightGrey)
                 .padding(.top)

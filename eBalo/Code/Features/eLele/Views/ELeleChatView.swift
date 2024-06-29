@@ -125,17 +125,31 @@ struct ELeleChatView: View {
     func sendMessage(_ message: String) {
         Task { @MainActor in
             do {
-                let response = try await ChatApi.shared.sendMessage(message)
+                let id = UUID().uuidString
+                
+                let response = try await ChatApi.shared.sendMessage(id, message)
                 
                 print("response id: \(response.id)")
                 
+                var isTextSet = false
+                
                 while true {
-                    let pollResponse = try await ChatApi.shared.pollResponse()
+                    try await Task.sleep(nanoseconds: 250_000_000)
                     
-                    if pollResponse.file != nil {
-                        receiveMessage(pollResponse.text ?? "")
+                    let pollResponse = try await ChatApi.shared.pollResponse(id)
+                    
+                    if !isTextSet {
+                        if let text = pollResponse.text {
+                            receiveMessage(text)
+                            
+                            isTextSet = true
+                        }
                         
-                        playRawResponse(pollResponse.file!)
+                        continue
+                    }
+                    
+                    if let file =  pollResponse.file {
+                        playRawResponse(file)
                         
                         return
                     }

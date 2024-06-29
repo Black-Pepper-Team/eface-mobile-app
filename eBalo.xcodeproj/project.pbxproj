@@ -31,6 +31,9 @@
 		CE7F09152C3027DF0067E1E4 /* View+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09142C3027DF0067E1E4 /* View+Align.swift */; };
 		CE7F09172C30289C0067E1E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09162C30289C0067E1E4 /* Contact.swift */; };
 		CE7F091D2C3037A00067E1E4 /* UIViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F091C2C3037A00067E1E4 /* UIViewControlller.swift */; };
+		CE7F09212C3058350067E1E4 /* CommunitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09202C3058350067E1E4 /* CommunitiesView.swift */; };
+		CE7F09232C30605E0067E1E4 /* CommunitiesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09222C30605E0067E1E4 /* CommunitiesApi.swift */; };
+		CE7F09262C3063D10067E1E4 /* CommunitiesView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09252C3063D10067E1E4 /* CommunitiesView+ViewModel.swift */; };
 		CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */; };
 		CE9E82B62BA881F400AAF885 /* eBaloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B52BA881F400AAF885 /* eBaloApp.swift */; };
 		CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B72BA881F400AAF885 /* AppView.swift */; };
@@ -95,6 +98,9 @@
 		CE7F09142C3027DF0067E1E4 /* View+Align.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Align.swift"; sourceTree = "<group>"; };
 		CE7F09162C30289C0067E1E4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CE7F091C2C3037A00067E1E4 /* UIViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControlller.swift; sourceTree = "<group>"; };
+		CE7F09202C3058350067E1E4 /* CommunitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesView.swift; sourceTree = "<group>"; };
+		CE7F09222C30605E0067E1E4 /* CommunitiesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesApi.swift; sourceTree = "<group>"; };
+		CE7F09252C3063D10067E1E4 /* CommunitiesView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommunitiesView+ViewModel.swift"; sourceTree = "<group>"; };
 		CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Font.swift"; sourceTree = "<group>"; };
 		CE9E82B22BA881F400AAF885 /* eBalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E82B52BA881F400AAF885 /* eBaloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBaloApp.swift; sourceTree = "<group>"; };
@@ -327,6 +333,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CE7F091E2C3057AE0067E1E4 /* Communities */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09242C3063B60067E1E4 /* ViewModels */,
+				CE7F091F2C30582B0067E1E4 /* View */,
+			);
+			path = Communities;
+			sourceTree = "<group>";
+		};
+		CE7F091F2C30582B0067E1E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09202C3058350067E1E4 /* CommunitiesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE7F09242C3063B60067E1E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09252C3063D10067E1E4 /* CommunitiesView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CE9E82A92BA881F400AAF885 = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +419,7 @@
 		CE9E82C72BA8852700AAF885 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE7F091E2C3057AE0067E1E4 /* Communities */,
 				CE7F09102C3026AA0067E1E4 /* Contacts */,
 				CE7F09002C2FF5070067E1E4 /* eLele */,
 				CEF8C48F2BAF119800A3F51A /* Registration */,
@@ -429,6 +461,7 @@
 				CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */,
 				CED7D8AA2BAF94D80039394D /* ZKUtils.swift */,
 				CE7F090E2C3022D70067E1E4 /* ChatApi.swift */,
+				CE7F09222C30605E0067E1E4 /* CommunitiesApi.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -731,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF080142BAE3E20004D9CB3 /* EbaloHistoryEntry.swift in Sources */,
+				CE7F09262C3063D10067E1E4 /* CommunitiesView+ViewModel.swift in Sources */,
 				CEF8C48E2BAF0D0C00A3F51A /* UIImage.swift in Sources */,
 				CE32CF4F2BAC97A800E507B6 /* MainView.swift in Sources */,
 				CEF8C4922BAF11B600A3F51A /* RegistrationView.swift in Sources */,
@@ -740,6 +774,7 @@
 				CEF07FF92BAE0CB7004D9CB3 /* CredentialsView.swift in Sources */,
 				CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */,
 				CE7B6FB22BAEE422004D9ABF /* EthersacnResp.swift in Sources */,
+				CE7F09212C3058350067E1E4 /* CommunitiesView.swift in Sources */,
 				CE7F09152C3027DF0067E1E4 /* View+Align.swift in Sources */,
 				CEF07FEF2BADFAE9004D9CB3 /* CommonButtonView.swift in Sources */,
 				CE7F09082C2FFD910067E1E4 /* ELeleChatView.swift in Sources */,
@@ -752,6 +787,7 @@
 				CE778B6C2BA9A4DC00B26485 /* FontRegistry.swift in Sources */,
 				CEF07FFC2BAE0D09004D9CB3 /* Credential.swift in Sources */,
 				CEF8C4CC2BAF829900A3F51A /* MRZScannerView.swift in Sources */,
+				CE7F09232C30605E0067E1E4 /* CommunitiesApi.swift in Sources */,
 				CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */,
 				CEF07FF52BAE0419004D9CB3 /* MainTabView.swift in Sources */,
 				CE9E82D72BA8917100AAF885 /* LottieView.swift in Sources */,
