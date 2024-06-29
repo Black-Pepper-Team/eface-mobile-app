@@ -140,10 +140,12 @@ extension AppView {
             
             let encodedImage = image.rotate(radians: 0)!.jpegData(compressionQuality: 1)!.base64EncodedString()
             
+            let secretKey = try EthereumPrivateKey(hexPrivateKey: secretKey!)
+            
             let requestAttr = DimaRequestAttributes(
                 did: registrationStatus.identity.getDID(),
                 userID: registrationStatus.identity.usedId,
-                publicKey: registrationStatus.identity.getPublicKeyHex(),
+                publicKey: secretKey.address.hex(eip55: false),
                 metadata: nickName,
                 image: encodedImage
             )

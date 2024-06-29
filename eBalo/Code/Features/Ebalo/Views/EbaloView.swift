@@ -101,8 +101,6 @@ struct EbaloView: View {
                                         
                                         let from = try await appViewModel.getAddressByUserId(localUserid)
                                         
-                                        print(from)
-                                        
                                         let identity = IdentityNewIdentity(
                                             appViewModel.secretKey!,
                                             nil,
