@@ -26,6 +26,8 @@ extension AppView {
         
         @Published var historyEntries: [EbaloHistoryEntry] = []
         
+        @Published var contacts: [Contact] = []
+        
         @Published var fetchHistoryCancelable: Task<(), Never>? = nil
         
         @Published var balance = 0
@@ -35,6 +37,10 @@ extension AppView {
                 config = try Config()
             } catch let error {
                 fatalError("appview model error: \(error)")
+            }
+            
+            Task { @MainActor in
+                self.contacts = SimpleStorage.loadContacts()
             }
         }
         
@@ -385,7 +391,7 @@ extension AppView {
             
             let request = DimaEbaloResponse(data: DimaEbaloResponseDataClass(id: 1, type: "pk", attributes: DimaEbaloResponseAttributes(image: encodedImage)))
             
-            let reqeustURL = "https://0a77-62-80-164-77.ngrok-free.app/integrations/face-extractor-svc/pk-from-image"
+            let reqeustURL = "https://c2b8-185-46-149-146.ngrok-free.app/integrations/face-extractor-svc/pk-from-image"
             
             let responseRaw = await AF.request(reqeustURL, method: .post, parameters: request, encoder: JSONParameterEncoder())
                 .serializingDecodable(DimaEbaloRequest.self)

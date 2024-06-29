@@ -5,6 +5,8 @@ import ExyteChat
 
 struct ELeleChatView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @EnvironmentObject private var appViewModel: AppView.ViewModel
 
     @State private var isRecording = false
     @State private var audioRecorder: AVAudioRecorder!
@@ -53,7 +55,7 @@ struct ELeleChatView: View {
                     user: User(
                         id: "remote",
                         name: "eLele",
-                        avatarURL: nil,
+                        avatarURL: URL(string: "https://i.ibb.co/DCZxTBy/2024-06-29-13-42-32.jpg")!,
                         isCurrentUser: false
                     ),
                     text: "Hello, I'm eLele, your personal assistant. How can I help you today?"
@@ -85,9 +87,11 @@ struct ELeleChatView: View {
                 text: draftMessage.text
             )
         )
+        
+        self.sendMessage(
+            draftMessage.text
+        )
     }
-    
-    func sendMessage() {}
     
     func transcribeAudio(url: URL) {
         // create a new recognizer and point it at our audio
@@ -117,8 +121,57 @@ struct ELeleChatView: View {
             }
         }
     }
+    
+    func sendMessage(_ message: String) {
+        Task { @MainActor in
+            do {
+                let response = try await ChatApi.shared.sendMessage(message)
+                
+                print("response id: \(response.id)")
+                
+                while true {
+                    let pollResponse = try await ChatApi.shared.pollResponse()
+                    
+                    if pollResponse.file != nil {
+                        receiveMessage(pollResponse.text ?? "")
+                        
+                        playRawResponse(pollResponse.file!)
+                        
+                        return
+                    }
+                }
+            } catch {
+                print("Failed to send message: \(error)")
+            }
+        }
+    }
+    
+    func receiveMessage(_ text: String) {
+        self.messages.append(
+            .init(
+                id: UUID().uuidString,
+                user: User(
+                    id: "remote",
+                    name: "eLele",
+                    avatarURL: URL(string: "https://i.ibb.co/DCZxTBy/2024-06-29-13-42-32.jpg")!,
+                    isCurrentUser: false
+                ),
+                text: text
+            )
+        )
+    }
+    
+    func playRawResponse(_ rawAudio: Data) {
+        do {
+            self.audioPlayer = try AVAudioPlayer(data: rawAudio)
+            self.audioPlayer.play()
+        } catch {
+            print("Failed to play audio: \(error)")
+        }
+    }
 }
 
 #Preview {
     ELeleChatView()
+        .environmentObject(AppView.ViewModel())
 }

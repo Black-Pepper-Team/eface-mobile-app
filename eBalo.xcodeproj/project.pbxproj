@@ -26,6 +26,11 @@
 		CE7F09082C2FFD910067E1E4 /* ELeleChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09072C2FFD910067E1E4 /* ELeleChatView.swift */; };
 		CE7F090A2C300CA40067E1E4 /* vrecording.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7F09092C300CA40067E1E4 /* vrecording.json */; };
 		CE7F090D2C3015630067E1E4 /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = CE7F090C2C3015630067E1E4 /* ExyteChat */; };
+		CE7F090F2C3022D70067E1E4 /* ChatApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F090E2C3022D70067E1E4 /* ChatApi.swift */; };
+		CE7F09132C3026BC0067E1E4 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09122C3026BC0067E1E4 /* ContactsView.swift */; };
+		CE7F09152C3027DF0067E1E4 /* View+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09142C3027DF0067E1E4 /* View+Align.swift */; };
+		CE7F09172C30289C0067E1E4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F09162C30289C0067E1E4 /* Contact.swift */; };
+		CE7F091D2C3037A00067E1E4 /* UIViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F091C2C3037A00067E1E4 /* UIViewControlller.swift */; };
 		CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */; };
 		CE9E82B62BA881F400AAF885 /* eBaloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B52BA881F400AAF885 /* eBaloApp.swift */; };
 		CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82B72BA881F400AAF885 /* AppView.swift */; };
@@ -85,6 +90,11 @@
 		CE7F09052C2FF8470067E1E4 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		CE7F09072C2FFD910067E1E4 /* ELeleChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELeleChatView.swift; sourceTree = "<group>"; };
 		CE7F09092C300CA40067E1E4 /* vrecording.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vrecording.json; sourceTree = "<group>"; };
+		CE7F090E2C3022D70067E1E4 /* ChatApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApi.swift; sourceTree = "<group>"; };
+		CE7F09122C3026BC0067E1E4 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		CE7F09142C3027DF0067E1E4 /* View+Align.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Align.swift"; sourceTree = "<group>"; };
+		CE7F09162C30289C0067E1E4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		CE7F091C2C3037A00067E1E4 /* UIViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControlller.swift; sourceTree = "<group>"; };
 		CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Font.swift"; sourceTree = "<group>"; };
 		CE9E82B22BA881F400AAF885 /* eBalo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBalo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E82B52BA881F400AAF885 /* eBaloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBaloApp.swift; sourceTree = "<group>"; };
@@ -218,6 +228,8 @@
 				CE32CF532BAC983400E507B6 /* String.swift */,
 				CE907DF92BAC9ABC002F110C /* SwiftUI+Font.swift */,
 				CEF8C48D2BAF0D0C00A3F51A /* UIImage.swift */,
+				CE7F09142C3027DF0067E1E4 /* View+Align.swift */,
+				CE7F091C2C3037A00067E1E4 /* UIViewControlller.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +302,31 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		CE7F09102C3026AA0067E1E4 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09182C3028A00067E1E4 /* Models */,
+				CE7F09112C3026B00067E1E4 /* Views */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		CE7F09112C3026B00067E1E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09122C3026BC0067E1E4 /* ContactsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7F09182C3028A00067E1E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F09162C30289C0067E1E4 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE9E82A92BA881F400AAF885 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +388,7 @@
 		CE9E82C72BA8852700AAF885 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE7F09102C3026AA0067E1E4 /* Contacts */,
 				CE7F09002C2FF5070067E1E4 /* eLele */,
 				CEF8C48F2BAF119800A3F51A /* Registration */,
 				CE7B6FB32BAEFC0E004D9ABF /* Present */,
@@ -390,6 +428,7 @@
 				CE778B6F2BA9A73700B26485 /* Extensions */,
 				CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */,
 				CED7D8AA2BAF94D80039394D /* ZKUtils.swift */,
+				CE7F090E2C3022D70067E1E4 /* ChatApi.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -695,16 +734,21 @@
 				CEF8C48E2BAF0D0C00A3F51A /* UIImage.swift in Sources */,
 				CE32CF4F2BAC97A800E507B6 /* MainView.swift in Sources */,
 				CEF8C4922BAF11B600A3F51A /* RegistrationView.swift in Sources */,
+				CE7F090F2C3022D70067E1E4 /* ChatApi.swift in Sources */,
+				CE7F091D2C3037A00067E1E4 /* UIViewControlller.swift in Sources */,
 				CE7F09032C2FF52B0067E1E4 /* ELeleAssistentButton.swift in Sources */,
 				CEF07FF92BAE0CB7004D9CB3 /* CredentialsView.swift in Sources */,
 				CE9E82B82BA881F400AAF885 /* AppView.swift in Sources */,
 				CE7B6FB22BAEE422004D9ABF /* EthersacnResp.swift in Sources */,
+				CE7F09152C3027DF0067E1E4 /* View+Align.swift in Sources */,
 				CEF07FEF2BADFAE9004D9CB3 /* CommonButtonView.swift in Sources */,
 				CE7F09082C2FFD910067E1E4 /* ELeleChatView.swift in Sources */,
+				CE7F09172C30289C0067E1E4 /* Contact.swift in Sources */,
 				CE9E82E92BA89DBE00AAF885 /* Config.swift in Sources */,
 				CED7D8AB2BAF94D80039394D /* ZKUtils.swift in Sources */,
 				CE9E82B62BA881F400AAF885 /* eBaloApp.swift in Sources */,
 				CEF080062BAE2EE9004D9CB3 /* EbaloView.swift in Sources */,
+				CE7F09132C3026BC0067E1E4 /* ContactsView.swift in Sources */,
 				CE778B6C2BA9A4DC00B26485 /* FontRegistry.swift in Sources */,
 				CEF07FFC2BAE0D09004D9CB3 /* Credential.swift in Sources */,
 				CEF8C4CC2BAF829900A3F51A /* MRZScannerView.swift in Sources */,

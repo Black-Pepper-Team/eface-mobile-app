@@ -11,6 +11,7 @@ class SimpleStorage {
     static let credentialsKey = "DistirbutedLab.eBalo.credentials"
     static let secretKeyKey = "DistirbutedLab.eBalo.secretKey"
     static let userIDKey = "DistirbutedLab.eBalo.userID"
+    static let contactsKey = "DistirbutedLab.eBalo.contacts"
     
     static func loadCredentials() -> [Credential] {
         guard let json = UserDefaults.standard.data(forKey: Self.credentialsKey) else {
@@ -58,5 +59,25 @@ class SimpleStorage {
     
     static func eraceUserId() {
         UserDefaults.standard.removeObject(forKey: Self.userIDKey)
+    }
+    
+    static func loadContacts() -> [Contact] {
+        guard let json = UserDefaults.standard.data(forKey: Self.contactsKey) else {
+            return []
+        }
+        
+        guard let contacts = try? JSONDecoder().decode([Contact].self, from: json) else {
+            print("failed to load contacts: invalid contacts")
+            
+            return []
+        }
+        
+        return contacts
+    }
+    
+    static func saveContacts(_ contacts: [Contact]) {
+        let jsonData = try! JSONEncoder().encode(contacts)
+        
+        UserDefaults.standard.set(jsonData, forKey: Self.contactsKey)
     }
 }

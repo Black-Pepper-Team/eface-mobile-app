@@ -19,6 +19,18 @@ struct CredentialsView: View {
                     .font(.customFont(font: .helvetica, style: .bold, size: 20))
                     .foregroundStyle(.dullBlue)
                 Spacer()
+                NavigationLink {
+                    ContactsView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    ZStack {
+                        Circle()
+                            .foregroundStyle(.lightGrey)
+                        Image(systemName: "book.closed.fill")
+                            .foregroundStyle(.dullBlue)
+                    }
+                    .frame(width: 30, height: 30)
+                }
             }
             .padding(.horizontal)
             HStack {
