@@ -36,7 +36,21 @@ class CommunitiesApi {
         return response
     }
     
-    func createCommunity() async throws {}
+    func createCommunity(_ collectionName: String, _ collectionSymbol: String) async throws -> GetCommunityResponse {
+        let requestUrl = url.appendingPathComponent("/integrations/community-indexer/v1/community")
+        
+        let requestPayload = CreateCommunityRequest(
+            collectionName: collectionName,
+            collectionSymbol: collectionSymbol
+        )
+        
+        let response = try await AF.request(requestUrl, method: .post, parameters: requestPayload, encoder: JSONParameterEncoder.default)
+            .serializingDecodable(GetCommunityResponse.self)
+            .result
+            .get()
+        
+        return response
+    }
 }
 
 struct Community: Codable {
@@ -74,5 +88,15 @@ struct ImportCommunityRequest: Codable {
     
     enum CodingKeys: String, CodingKey {
         case contractAddress = "contract_address"
+    }
+}
+
+struct CreateCommunityRequest: Codable {
+    let collectionName: String
+    let collectionSymbol: String
+    
+    enum CodingKeys: String, CodingKey {
+        case collectionName = "collection_name"
+        case collectionSymbol = "collection_symbol"
     }
 }

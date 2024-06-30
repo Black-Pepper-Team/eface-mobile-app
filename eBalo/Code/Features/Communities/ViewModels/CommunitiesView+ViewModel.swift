@@ -7,7 +7,10 @@ extension CommunitiesView {
         func fetchCommunities() async {
             do {
                 let response = try await CommunitiesApi.shared.fetchCommunities()
-                communities = response.communities
+                
+                DispatchQueue.main.async {
+                    self.communities = response.communities
+                }
             } catch {
                 print("Error fetching communities: \(error)")
             }

@@ -211,9 +211,45 @@ struct ImportCommunity: View {
 struct CreateCommunity: View {
     let onFinish: () -> Void
     
+    @State private var collectionName = ""
+    @State private var collectionSymbol = ""
+    
     var body: some View {
         VStack {
-            
+            TextField("Collection Name", text: $collectionName)
+                .textFieldStyle(.roundedBorder)
+                .scenePadding()
+            TextField("Collection Symbol", text: $collectionSymbol)
+                .textFieldStyle(.roundedBorder)
+                .scenePadding()
+            Spacer()
+            Button(action: createCommunity) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundColor(.dullBlue)
+                    Text("Create")
+                        .font(.customFont(font: .helvetica, style: .regular, size: 14))
+                        .foregroundStyle(.white)
+                        .scenePadding()
+                }
+            }
+            .frame(width: 150, height: 25)
+        }
+    }
+    
+    func createCommunity() {
+        Task { @MainActor in
+            do {
+                if collectionName.isEmpty || collectionSymbol.isEmpty {
+                    return
+                }
+                
+                let _ = try await CommunitiesApi.shared.createCommunity(collectionName, collectionSymbol)
+                
+                onFinish()
+            } catch {
+                print("error: \(error)")
+            }
         }
     }
 }
