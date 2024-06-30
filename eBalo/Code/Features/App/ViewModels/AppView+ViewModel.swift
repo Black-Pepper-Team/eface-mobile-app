@@ -479,6 +479,16 @@ extension AppView {
             
             return try web3.eth.sendRawTransaction(transaction: signedTx).wait().hex()
         }
+        
+        var ethAdderess: String {
+            guard let secretKey else {
+                return ""
+            }
+            
+            guard let pk = try? EthereumPrivateKey(hexPrivateKey: secretKey) else { return "" }
+            
+            return pk.address.hex(eip55: false)
+        }
     }
 }
 

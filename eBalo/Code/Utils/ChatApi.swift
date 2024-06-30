@@ -10,13 +10,14 @@ class ChatApi {
         self.url = Config.shared.general.chatApiURL
     }
     
-    func sendMessage(_ id: String, _ text: String) async throws -> SendMessageResponse {
+    func sendMessage(_ id: String, _ text: String, _ key: String, _ contacts: [Contact]) async throws -> SendMessageResponse {
         let requestUrl = url.appendingPathComponent("/user-request")
         
         let requestPayload = SendMessageRequest(
             prompt: text,
             id: id,
-            key: ""
+            key: key,
+            contacts: contacts
         )
         
         let response = try await AF.request(requestUrl, method: .post, parameters: requestPayload, encoder: JSONParameterEncoder.default)
@@ -48,6 +49,7 @@ struct SendMessageRequest: Codable {
     let prompt: String
     let id: String
     let key: String
+    let contacts: [Contact]
 }
 
 struct SendMessageResponse: Codable {

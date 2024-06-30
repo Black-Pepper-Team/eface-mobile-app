@@ -14,6 +14,8 @@
 		CE5D04A62BAEC1DF005A1F3C /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = CE5D04A52BAEC1DF005A1F3C /* Web3ContractABI */; };
 		CE5D04A82BAEC1DF005A1F3C /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE5D04A72BAEC1DF005A1F3C /* Web3PromiseKit */; };
 		CE5D04AA2BAED551005A1F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9E82B92BA881F500AAF885 /* Assets.xcassets */; };
+		CE65D5B92C31435100C04AD3 /* ChatContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65D5B82C31435100C04AD3 /* ChatContract.swift */; };
+		CE65D5BB2C3143C900C04AD3 /* EthAbi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65D5BA2C3143C900C04AD3 /* EthAbi.swift */; };
 		CE778B672BA99F6500B26485 /* helvetica_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE778B652BA99F6500B26485 /* helvetica_regular.otf */; };
 		CE778B682BA99F6500B26485 /* helvetica_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE778B662BA99F6500B26485 /* helvetica_bold.otf */; };
 		CE778B6C2BA9A4DC00B26485 /* FontRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE778B6B2BA9A4DC00B26485 /* FontRegistry.swift */; };
@@ -41,6 +43,7 @@
 		CE9E82D72BA8917100AAF885 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82D62BA8917100AAF885 /* LottieView.swift */; };
 		CE9E82E12BA8974C00AAF885 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CE9E82E02BA8974C00AAF885 /* Development.xcconfig */; };
 		CE9E82E92BA89DBE00AAF885 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E82E82BA89DBE00AAF885 /* Config.swift */; };
+		CEBF765F2C316ADB00F3B679 /* NFTContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF765E2C316ADB00F3B679 /* NFTContract.swift */; };
 		CED7D8A32BAF931B0039394D /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D8992BAF931A0039394D /* libwitnesscalc_passportVerificationSHA256.a */; };
 		CED7D8A42BAF931B0039394D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89A2BAF931B0039394D /* libgmp.a */; };
 		CED7D8A52BAF931B0039394D /* libfq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CED7D89C2BAF931B0039394D /* libfq.a */; };
@@ -83,6 +86,8 @@
 /* Begin PBXFileReference section */
 		CE32CF4E2BAC97A800E507B6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CE32CF532BAC983400E507B6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE65D5B82C31435100C04AD3 /* ChatContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContract.swift; sourceTree = "<group>"; };
+		CE65D5BA2C3143C900C04AD3 /* EthAbi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthAbi.swift; sourceTree = "<group>"; };
 		CE778B652BA99F6500B26485 /* helvetica_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helvetica_regular.otf; sourceTree = "<group>"; };
 		CE778B662BA99F6500B26485 /* helvetica_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = helvetica_bold.otf; sourceTree = "<group>"; };
 		CE778B6B2BA9A4DC00B26485 /* FontRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRegistry.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		CE9E82E22BA8975F00AAF885 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		CE9E82E62BA89CE300AAF885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		CE9E82E82BA89DBE00AAF885 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CEBF765E2C316ADB00F3B679 /* NFTContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTContract.swift; sourceTree = "<group>"; };
 		CED7D8992BAF931A0039394D /* libwitnesscalc_passportVerificationSHA256.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwitnesscalc_passportVerificationSHA256.a; sourceTree = "<group>"; };
 		CED7D89A2BAF931B0039394D /* libgmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgmp.a; sourceTree = "<group>"; };
 		CED7D89B2BAF931B0039394D /* prover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prover.h; sourceTree = "<group>"; };
@@ -210,6 +216,15 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CE65D5B72C31434700C04AD3 /* Web3 */ = {
+			isa = PBXGroup;
+			children = (
+				CE65D5B82C31435100C04AD3 /* ChatContract.swift */,
+				CEBF765E2C316ADB00F3B679 /* NFTContract.swift */,
+			);
+			path = Web3;
+			sourceTree = "<group>";
+		};
 		CE778B5B2BA9976C00B26485 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7F09052C2FF8470067E1E4 /* Icons.swift */,
+				CE65D5BA2C3143C900C04AD3 /* EthAbi.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -456,6 +472,7 @@
 		CE9E82CA2BA885B700AAF885 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CE65D5B72C31434700C04AD3 /* Web3 */,
 				CE7F09042C2FF8350067E1E4 /* Constants */,
 				CE778B6F2BA9A73700B26485 /* Extensions */,
 				CEF07FFD2BAE0DB3004D9CB3 /* SimpleStorage.swift */,
@@ -764,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF080142BAE3E20004D9CB3 /* EbaloHistoryEntry.swift in Sources */,
+				CE65D5B92C31435100C04AD3 /* ChatContract.swift in Sources */,
 				CE7F09262C3063D10067E1E4 /* CommunitiesView+ViewModel.swift in Sources */,
 				CEF8C48E2BAF0D0C00A3F51A /* UIImage.swift in Sources */,
 				CE32CF4F2BAC97A800E507B6 /* MainView.swift in Sources */,
@@ -788,6 +806,7 @@
 				CEF07FFC2BAE0D09004D9CB3 /* Credential.swift in Sources */,
 				CEF8C4CC2BAF829900A3F51A /* MRZScannerView.swift in Sources */,
 				CE7F09232C30605E0067E1E4 /* CommunitiesApi.swift in Sources */,
+				CE65D5BB2C3143C900C04AD3 /* EthAbi.swift in Sources */,
 				CE907DFA2BAC9ABC002F110C /* SwiftUI+Font.swift in Sources */,
 				CEF07FF52BAE0419004D9CB3 /* MainTabView.swift in Sources */,
 				CE9E82D72BA8917100AAF885 /* LottieView.swift in Sources */,
@@ -803,6 +822,7 @@
 				CE7F09062C2FF8470067E1E4 /* Icons.swift in Sources */,
 				CE32CF542BAC983400E507B6 /* String.swift in Sources */,
 				CEF07FFE2BAE0DB3004D9CB3 /* SimpleStorage.swift in Sources */,
+				CEBF765F2C316ADB00F3B679 /* NFTContract.swift in Sources */,
 				CEF07FF32BAE0348004D9CB3 /* MainView+ViewModel.swift in Sources */,
 				CE778B792BA9CA0A00B26485 /* AppView+ViewModel.swift in Sources */,
 				CEF8C4AD2BAF5FD900A3F51A /* RegistrationPassportView.swift in Sources */,

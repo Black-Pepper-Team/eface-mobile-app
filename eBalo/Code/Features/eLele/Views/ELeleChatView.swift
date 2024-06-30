@@ -127,9 +127,9 @@ struct ELeleChatView: View {
             do {
                 let id = UUID().uuidString
                 
-                let response = try await ChatApi.shared.sendMessage(id, message)
-                
-                print("response id: \(response.id)")
+                let _ = try await ChatApi.shared.sendMessage(
+                    id, message, appViewModel.secretKey ?? "", appViewModel.contacts
+                )
                 
                 var isTextSet = false
                 

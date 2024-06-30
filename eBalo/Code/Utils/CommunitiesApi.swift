@@ -1,5 +1,7 @@
 import Alamofire
 import Foundation
+import Web3
+import Identity
 
 class CommunitiesApi {
     static let shared = CommunitiesApi()
@@ -36,16 +38,55 @@ class CommunitiesApi {
         return response
     }
     
-    func createCommunity(_ collectionName: String, _ collectionSymbol: String) async throws -> GetCommunityResponse {
+    func createCommunity(_ privateKey: String, _ collectionName: String, _ collectionSymbol: String) async throws -> GetCommunityResponse {
         let requestUrl = url.appendingPathComponent("/integrations/community-indexer/v1/community")
         
         let requestPayload = CreateCommunityRequest(
             collectionName: collectionName,
-            collectionSymbol: collectionSymbol
+            collectionSymbol: collectionSymbol,
+            privateKey: privateKey
         )
         
         let response = try await AF.request(requestUrl, method: .post, parameters: requestPayload, encoder: JSONParameterEncoder.default)
             .serializingDecodable(GetCommunityResponse.self)
+            .result
+            .get()
+        
+        return response
+    }
+    
+    func registerInCommunity(_ nftID: String, _ nftOwner: String, _ contractID: String, _ secretKey: String, _ privateKey: String) async throws -> RegisterInCommunityResponse {
+        let requestUrl = url.appendingPathComponent("/integrations/community-indexer/v1/community/register")
+        
+        let identity = IdentityNewIdentity(secretKey, nil, nil)!
+        
+        let requestPayload = RegisterInCommunityRequest(
+            nftID: nftID,
+            nftOwner: nftOwner,
+            contractID: contractID,
+            bjjPublicKey: identity.getPublicKeyHex(),
+            privateKey: privateKey
+        )
+        
+        let response = try await AF.request(requestUrl, method: .post, parameters: requestPayload, encoder: JSONParameterEncoder.default)
+            .serializingDecodable(RegisterInCommunityResponse.self)
+            .result
+            .get()
+        
+        return response
+    }
+    
+    func mintNft(_ contractAddress: String, _ privateKey: String, _ participantAddress: String) async throws -> SimpleResponse {
+        let requestUrl = url.appendingPathComponent("/integrations/community-indexer/v1/community/add-participant")
+        
+        let reqeustPayload = MintNftRequest(
+            contractAddress: contractAddress,
+            privateKey: privateKey,
+            participantAddress: participantAddress
+        )
+        
+        let response = try await AF.request(requestUrl, method: .post, parameters: reqeustPayload, encoder: JSONParameterEncoder.default)
+            .serializingDecodable(SimpleResponse.self)
             .result
             .get()
         
@@ -94,9 +135,49 @@ struct ImportCommunityRequest: Codable {
 struct CreateCommunityRequest: Codable {
     let collectionName: String
     let collectionSymbol: String
+    let privateKey: String
     
     enum CodingKeys: String, CodingKey {
         case collectionName = "collection_name"
         case collectionSymbol = "collection_symbol"
+        case privateKey = "private_key"
+    }
+}
+
+struct RegisterInCommunityRequest: Codable {
+    let nftID: String
+    let nftOwner, contractID, bjjPublicKey, privateKey: String
+
+    enum CodingKeys: String, CodingKey {
+        case nftID = "nft_id"
+        case nftOwner = "nft_owner"
+        case contractID = "contract_id"
+        case bjjPublicKey = "bjj_public_key"
+        case privateKey = "private_key"
+    }
+}
+
+struct RegisterInCommunityResponse: Codable {
+    let id: String
+    let status: RegisterInCommunityStatus
+}
+
+enum RegisterInCommunityStatus: String, Codable {
+    case registered = "registered"
+    case processing = "processing"
+    case failedRegister = "failed-register"
+}
+
+struct SimpleResponse: Codable {
+    let id: String
+}
+
+struct MintNftRequest: Codable {
+    let contractAddress, privateKey, participantAddress: String
+
+    enum CodingKeys: String, CodingKey {
+        case contractAddress = "contract_address"
+        case privateKey = "private_key"
+        case participantAddress = "participant_address"
     }
 }
