@@ -92,6 +92,25 @@ class CommunitiesApi {
         
         return response
     }
+    
+    func sendMessageAnton(_ nftID: String, _ nftOwner: String, _ contractID: String, _ bjjPrivateKey: String, _ message: String) async throws -> SimpleResponse {
+        let requestUrl = url.appendingPathComponent("/integrations/community-indexer/v1/community/message")
+        
+        let requestPayload = SendMessageAntonRequest(
+            nftID: nftID,
+            nftOwner: nftOwner,
+            contractID: contractID,
+            bjjPrivateKey: bjjPrivateKey,
+            message: message
+        )
+        
+        let response = try await AF.request(requestUrl, method: .post, parameters: requestPayload, encoder: JSONParameterEncoder.default)
+            .serializingDecodable(SimpleResponse.self)
+            .result
+            .get()
+        
+        return response
+    }
 }
 
 struct Community: Codable {
@@ -179,5 +198,17 @@ struct MintNftRequest: Codable {
         case contractAddress = "contract_address"
         case privateKey = "private_key"
         case participantAddress = "participant_address"
+    }
+}
+
+struct SendMessageAntonRequest: Codable {
+    let nftID, nftOwner, contractID, bjjPrivateKey, message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case nftID = "nft_id"
+        case nftOwner = "nft_owner"
+        case contractID = "contract_id"
+        case bjjPrivateKey = "bjj_private_key"
+        case message = "message"
     }
 }

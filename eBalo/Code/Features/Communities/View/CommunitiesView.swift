@@ -54,8 +54,26 @@ struct CommunitiesView: View {
                 .font(.customFont(font: .helvetica, style: .bold, size: 20))
                 .foregroundStyle(.dullBlue)
             Spacer()
+            refreshButton
             addCommunityButton
         }
+    }
+    
+    var refreshButton: some View {
+        Button(action: {
+            Task { @MainActor in
+                await viewModel.fetchCommunities()
+            }
+        }) {
+            ZStack {
+                Circle()
+                    .foregroundStyle(.white)
+                Image(systemName: "arrow.clockwise")
+                    .foregroundStyle(.dullBlue)
+            }
+            .frame(width: 35, height: 35)
+        }
+        .scenePadding()
     }
     
     var emptyState: some View {
@@ -311,8 +329,7 @@ struct CommunityView: View {
                 }
                 .padding(.top, 20)
                 Spacer()
-                ChatView(messages: messages) { draw in
-                }
+                ChatView(messages: messages, didSendMessage: handleMessage)
             }
         }
         .sheet(isPresented: $isSettings) {
@@ -402,6 +419,46 @@ struct CommunityView: View {
                 } catch {
                     print("error: \(error)")
                 }
+            }
+        }
+    }
+    
+    func handleMessage(_ draftMessage: DraftMessage) {
+        self.messages.append(
+            .init(
+                id: UUID().uuidString,
+                user: .init(
+                    id: "Local",
+                    name: "PIRATE",
+                    avatarURL: URL(string: "https://i.ibb.co/FnwZMzM/Daco-5704371.png")!,
+                    isCurrentUser: false
+                ),
+                createdAt: Date(),
+                text: draftMessage.text
+            )
+        )
+        
+        Task { @MainActor in
+            do {
+                let nftContract = try NFTContract(community.contractAddress)
+                
+                let tokens = try await nftContract.getTokensByOwner(self.appViewModel.ethAdderess)
+                
+                print("tokens: \(tokens)")
+                
+                guard let token = tokens.last else {
+                    return
+                }
+                
+                let _ = try await CommunitiesApi.shared.sendMessageAnton(
+                    token.description,
+                    community.ownerAddress,
+                    community.contractAddress,
+                    appViewModel.secretKey ?? "",
+                    draftMessage.text
+                )
+            } catch {
+                print("error: \(error)")
             }
         }
     }
